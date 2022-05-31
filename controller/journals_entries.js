@@ -33,5 +33,12 @@ router.post('/', (req, res) => {
 //edit
 
 //show
+router.get('/:id', (req, res) => {
+    journalEntry.findById(req.params.id, (err, foundEntry) => {
+        res.render('journal/show.ejs', {
+            entries: foundEntry
+        })
+    })
+})
 
 module.exports = router

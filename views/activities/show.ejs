@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs')%>
-    <title>View Activity</title>
+    <title><%=activities.Title%> <%= activities.createdAt.toString().slice(4,15) %> </title>
 </head>
 <body>
     <nav>
