@@ -27,6 +27,11 @@ router.delete('/:id', (req, res) => {
     })
 })
 //update
+router.put('/:id', (req, res) => {
+    journalEntry.findByIdAndUpdate(req.params.id, req.body, () => {
+        res.redirect('/entries')
+    })
+})
 
 //create
 router.post('/', (req, res) => {
@@ -36,7 +41,13 @@ router.post('/', (req, res) => {
 })
 
 //edit
-
+router.get('/:id/edit', (req, res) => {
+    journalEntry.findById(req.params.id, (err, foundEntry) => {
+        res.render('journal/edit.ejs', {
+            entries : foundEntry
+        })
+    })
+})
 //show
 router.get('/:id', (req, res) => {
     journalEntry.findById(req.params.id, (err, foundEntry) => {
