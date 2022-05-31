@@ -8,7 +8,7 @@ const journalController = require('./controller/journals_entries')
 const app = express()
 
 //database connection
-mongoose.connect(process.env.DATABASE_URL)
+mongoose.connect(process.env.MONGODB_URI)
 const PORT = process.env.PORT
 
 
