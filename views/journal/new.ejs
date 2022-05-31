@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')%>
+    <title>Add a journal entry here</title>
+</head>
+<body>
+    <h1>Journal</h1>
+    <form action="/entries" method="POST">
+    Title: <input type="text" name="title"> <br>
+    <textarea name="entry" cols="80" rows="25"></textarea> <br>
+    <input type="submit" value="Add Entry">
+    </form>
+</body>
+</html>

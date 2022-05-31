@@ -16,7 +16,9 @@ router.get('/', (req, res) => {
     })
 })
 //new
-
+router.get('/new', (req, res) => {
+    res.render('journal/new.ejs')
+})
 //delete
 
 //update
