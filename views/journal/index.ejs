@@ -10,9 +10,11 @@
     <h1>Past journal entries here</h1>
     </header>
     <ul>
+        <%  for(let i=0; i < entries.length; i++) {  %>
         <li>
-            
+            <a href="/entries/<%=entries[i]._id%>"><%=entries[i].title%></a>
         </li>
+        <% } %> 
     </ul>
 </body>
 </html>

@@ -9,7 +9,11 @@ router.use(express.urlencoded({extended: false}))
 
 //index
 router.get('/', (req, res) => {
-    res.render('journal/index.ejs')
+    journalEntry.find({}, (err, foundEntry) => {
+    res.render('journal/index.ejs', {
+        entries : foundEntry
+    })
+    })
 })
 //new
 
@@ -18,6 +22,11 @@ router.get('/', (req, res) => {
 //update
 
 //create
+router.post('/', (req, res) => {
+    journalEntry.create(req.body, (err, createdEntry) => {
+        res.redirect('/entries')
+    })
+})
 
 //edit
 

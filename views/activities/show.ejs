@@ -10,6 +10,11 @@
     </nav>
     <main>
         <h1><%=activities.Title%></h1><br>
+        <h2><%=activities.Duration%> minutes </h2> <br>
+        <div>
+            <%= activities.Notes %> <br>
+            <%= activities.createdAt.toString().slice(0,15) %>
+        </div> <br>
         <form action="/activities/<%= activities.id %>?_method=DELETE" method="POST">
             <input type="submit" value="DELETE">
         </form><br>
