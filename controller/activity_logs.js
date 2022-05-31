@@ -39,4 +39,13 @@ router.post('/', (req, res) => {
 
 //edit
 
+//show
+router.get('/:id', (req, res) => {
+    Activity.findById(req.params.id, (err, foundActivity) => {
+        res.render('activities/show.ejs', {
+            activities: foundActivity
+        })
+    })
+})
+
 module.exports = router;
