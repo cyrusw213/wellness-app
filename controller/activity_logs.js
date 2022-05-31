@@ -31,7 +31,11 @@ router.delete('/:id', (req, res) => {
 })
 
 //update
-
+router.put('/:id', (req, res) => {
+    Activity.findByIdAndUpdate(req.params.id, req.body, () => {
+        res.redirect('/activities')
+    })
+})
 
 //create
 router.post('/', (req, res) => {
@@ -42,6 +46,13 @@ router.post('/', (req, res) => {
 })
 
 //edit
+router.get('/:id/edit', (req, res) => {
+    Activity.findById(req.params.id, (error, foundActivity) => {
+        res.render('activities/edit.ejs', {
+            activities: foundActivity,
+        })
+    })
+})
 
 //show
 router.get('/:id', (req, res) => {

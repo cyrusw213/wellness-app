@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 const activitySchema = new mongoose.Schema({
     Title: {type: String, required: true},
     Duration: {type: Number, required: true},
-    Notes: {type: String}
+    Notes: {type: String}},
+    {timestamps: true
 })
 
 const Activity = mongoose.model('Activity', activitySchema)

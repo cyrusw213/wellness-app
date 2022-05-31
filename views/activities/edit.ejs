@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs')%>
+    <title>Edit Activity</title>
+</head>
+<body>
+    <h1>Edit Activity</h1>
+    <form action="/activities/<%=activities._id%>?_method=PUT" method="POST">
+    <!-- prepopulate form with original data -->
+    Activity: <input type="text" name="Title" value="<%=activities.Title%>"> <br>
+    Duration: <input type="number" name="Duration" value="<%=activities.Duration%>"><br>
+    Notes: <textarea name="Notes" cols="30" rows="10"><%=activities.Notes%></textarea><br>
+    <input type="submit" value="Update">
+    </form>
+</body>
+</html>
