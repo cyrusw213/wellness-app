@@ -1,5 +1,6 @@
 //dependencies
 const express = require('express')
+const { append } = require('express/lib/response')
 const router = express.Router()
 const journalEntry = require('../models/journal')
 
@@ -20,7 +21,11 @@ router.get('/new', (req, res) => {
     res.render('journal/new.ejs')
 })
 //delete
-
+router.delete('/:id', (req, res) => {
+    journalEntry.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/entries')
+    })
+})
 //update
 
 //create
