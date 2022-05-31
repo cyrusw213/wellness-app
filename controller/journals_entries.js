@@ -1,7 +1,9 @@
 //dependencies
 const express = require('express')
 const router = express.Router()
-const journal = require('../models/journal')
+const journalEntry = require('../models/journal')
+
+router.use(express.urlencoded({extended: false}))
 
 //seed
 

@@ -1,14 +1,19 @@
 //dependencies
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const app = express();
-require('dotenv').config();
 const methodOverride = require("method-override")
 const activityController = require('./controller/activity_logs')
 const journalController = require('./controller/journals_entries')
+const app = express()
+
+//database connection
+mongoose.connect(process.env.DATABASE_URL)
+const PORT = process.env.PORT
+
 
 //middleware
-app.use(express.urlencoded({extended : true}))
+app.use(express.urlencoded({extended : false}))
 app.use(methodOverride("_method"))
 app.use(express.static('public'))
 app.use('/activities', activityController)
@@ -19,10 +24,6 @@ app.get('/', (req, res) => {
     res.render('index.ejs')
 })
 
-
-//database connection
-mongoose.connect(process.env.DATABASE_URL)
-const PORT = process.env.PORT
 
 const db = mongoose.connection
 db.on('error', (err) => console.log(err.message + ' is mongo not running?'));
