@@ -24,7 +24,11 @@ router.get('/new', (req, res) => {
 })
 
 //delete
-
+router.delete('/:id', (req, res) => {
+    Activity.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/activities')
+    })
+})
 
 //update
 
