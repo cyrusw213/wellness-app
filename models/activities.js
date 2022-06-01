@@ -4,7 +4,8 @@ const activitySchema = new mongoose.Schema({
     Date: {type: Date, required: true},
     Title: {type: String, required: true},
     Duration: {type: Number, required: true},
-    Notes: {type: String}},
+    Notes: {type: String},
+    Photo: {type: String}},
     {timestamps: true
 })
 
