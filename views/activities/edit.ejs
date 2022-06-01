@@ -5,6 +5,7 @@
     <title>Edit Activity</title>
 </head>
 <body>
+    <%- include('../partials/header.ejs')%>
     <h1>Edit Activity</h1>
     <form action="/activities/<%=activities._id%>?_method=PUT" method="POST">
     <!-- prepopulate form with original data -->
@@ -14,4 +15,5 @@
     <input type="submit" value="Update">
     </form>
 </body>
+<%- include('../partials/footer.ejs')%>
 </html>

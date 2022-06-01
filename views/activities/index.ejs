@@ -5,11 +5,9 @@
     <title>Past Activities</title>
 </head>
 <body>
-    <header>
-        <a href="/">Go Home</a> <br>
+    <%- include('../partials/header.ejs')%>
         <a href = "/activities/new">Log new entry</a> <br>
         <h1>Past Activities</h1>
-    </header>
     <main>
         <ul>
             <% for(let i = 0; i < activities.length; i++) { %>
@@ -20,4 +18,5 @@
         </ul>
     </main>
 </body>
+<%- include('../partials/footer.ejs')%>
 </html>

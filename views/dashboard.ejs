@@ -4,9 +4,12 @@
     <%- include('./partials/head.ejs')%>
     <title>Dashboard</title>
 </head>
+
 <body>
+    <%- include('./partials/nav.ejs')  %>
+    <%- include('./partials/header.ejs')%>
+
     <body>
-        <%- include('./partials/nav.ejs')  %>
         <h1>Welcome!</h1>
         <h3>Would you like to <a href="/entries">journal</a> or log an  <a href="activities">activity</a>?</h3>
 
@@ -14,4 +17,5 @@
     
     </html> 
 </body>
+<%- include('./partials/footer.ejs')%>
 </html>

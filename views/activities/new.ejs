@@ -5,6 +5,7 @@
     <title>log new activity here</title>
 </head>
 <body>
+    <%- include('../partials/header.ejs')%>
     <main>
         <form action="/activities" method="POST">
             Activity (dropdown eventually): <input type="text" name="Title"> <br>
@@ -14,4 +15,5 @@
         </form>
     </main>
 </body>
+<%- include('../partials/footer.ejs')%>
 </html>

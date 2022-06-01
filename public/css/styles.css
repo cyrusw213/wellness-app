@@ -1,0 +1,45 @@
+.body-overlay {
+  background: rgba(245, 245, 245, 0.4);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  padding: 1em;
+  overflow: auto;
+  box-sizing: border-box;
+}
+nav {
+  background-color: yellow;
+}
+header {
+    margin-bottom: 4em;
+    text-align: center;
+    color: red;
+    background-color: aqua;
+  }
+
+  header li {
+    font-family: 'Montserrat', helvetica;
+    font-weight: 700;
+    font-size: 0.8em;
+    margin-left: 1em;
+    text-transform: uppercase;
+    list-style: none;
+  }
+  header li a {
+    color: rgb(152, 130, 110);
+  }
+  header h1 {
+    color: rgb(129, 110, 124);
+  }
+
+  footer {
+      position: fixed;
+      background-color: aqua;
+      bottom: 0;
+      width: 100%;
+      color: white;
+      text-align: right;
+  }
+  

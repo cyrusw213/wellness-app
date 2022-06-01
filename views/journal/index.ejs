@@ -5,11 +5,10 @@
     <title>Log an activity here</title>
 </head>
 <body>
-    <header>
-        <a href="/">Go Home</a> <br>
+        <%- include('../partials/header.ejs')%>
+        <main>
         <a href=/entries/new> add new entries</a>
     <h1>Past journal entries here</h1>
-    </header>
     <ul>
         <%  for(let i=0; i < entries.length; i++) {  %>
         <li>
@@ -17,5 +16,7 @@
         </li>
         <% } %> 
     </ul>
+        </main>
 </body>
+<%- include('../partials/footer.ejs')%>
 </html>

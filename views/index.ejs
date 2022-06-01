@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('./partials/head.ejs')%>
+    <%- include('./partials/head')%>
     <title>Wellness App</title>
 </head>
 <body>
+    <%- include('./partials/header.ejs')%>
+    <div class="body-overlay">
     <%- include('./partials/nav.ejs')  %>
     <h1>Welcome! Log In or register to get started</h1>
+    </div>
 </body>
+<%- include('./partials/footer.ejs')%>
 </html>

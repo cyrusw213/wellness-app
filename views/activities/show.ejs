@@ -5,9 +5,12 @@
     <title><%=activities.Title%> <%= activities.createdAt.toString().slice(4,15) %> </title>
 </head>
 <body>
+    <%- include('../partials/header.ejs')%>
+
     <nav>
         <a href="/activities">Activities Index</a>
     </nav>
+
     <main>
         <h1><%=activities.Title%></h1><br>
         <h2><%=activities.Duration%> minutes </h2> <br>
@@ -21,4 +24,5 @@
         <a href="/activities/<%=activities.id %>/edit">Edit</a>
     </main>
 </body>
+<%- include('../partials/footer.ejs')%>
 </html>
