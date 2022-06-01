@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
 const activitySchema = new mongoose.Schema({
+    Date: {type: Date, required: true},
     Title: {type: String, required: true},
     Duration: {type: Number, required: true},
     Notes: {type: String}},

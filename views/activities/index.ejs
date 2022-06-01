@@ -6,16 +6,27 @@
 </head>
 <body>
     <%- include('../partials/header.ejs')%>
-        <a href = "/activities/new">Log new entry</a> <br>
-        <h1>Past Activities</h1>
-    <main>
-        <ul>
-            <% for(let i = 0; i < activities.length; i++) { %>
-                <li>
-                    <a href="/activities/<%=activities[i]._id%>"><%=activities[i].Title %> </a>
-                </li> 
-                <% } %> 
-        </ul>
+    <a class = "link-success" href = "/activities/new">Log New Entry</a> <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"> Date </th>
+                <th scope = "col">Activity</th>
+                <th scope = "col">Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i = 0; i <activities.length; i++) { %>
+            <tr>
+                <td scope = "row">
+                    <a href="/activities/<%=activities[i]._id%>"><%=activities[i].Date.toString().slice(0,15) %> </a>
+                </td>  
+                <td scope = "row"><%=activities[i].Title%></td>
+                <td scope = "row"><%=activities[i].Duration%></td>
+                <% } %>
+            </tr>
+        </tbody>
+    </table>
     </main>
 </body>
 <%- include('../partials/footer.ejs')%>

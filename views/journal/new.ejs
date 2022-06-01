@@ -7,10 +7,11 @@
 <body>
     <%- include('../partials/header.ejs')%>
     <h1>Journal</h1>
-    <form action="/entries" method="POST">
-    Title: <input type="text" name="title"> <br>
-    <textarea name="entry" cols="80" rows="25"></textarea> <br>
-    <input type="submit" value="Add Entry">
+    <form class = "form-group" action="/entries" method="POST">
+    Date: <input class="form-control" type="date" name="date">    
+    Title: <input class ="form-control" type="text" name="title"> <br>
+    <textarea class ="form-control" name="entry" cols="80" rows="15"></textarea> <br>
+    <input class ="form-control" type="submit" value="Add Entry">
     </form>
 </body>
 <%- include('../partials/footer.ejs')%>

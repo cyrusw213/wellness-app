@@ -7,11 +7,21 @@
 <body>
     <%- include('../partials/header.ejs')%>
     <main>
-        <form action="/activities" method="POST">
-            Activity (dropdown eventually): <input type="text" name="Title"> <br>
-            Duration (minutes): <input type="number" name="Duration"> <br>
-            Notes: <textarea name="Notes" id="" cols="30" rows="10"></textarea> <br>
-            <input type="submit" name="" value="Add Activity">
+        <form class = "form-group" action="/activities" method="POST">
+            <input class = "form-control" type="date" name="Date"><br>
+            Activity: <select class="form-control btn btn-sm dropdown-toggle" name="Title">
+                <option value="Misc Cardio">Misc Cardio</option>
+                <option value="Weightlifting">Weightlifting</option>
+                <option value="Run">Run</option>
+                <option value="Bike Ride">Bike Ride</option>
+                <option value="Swim">Swim</option>
+                <option value="Walk">Walk</option>
+                <option value="Yoga">Yoga</option>
+                <option value="Meditation">Meditation</option>
+            </select>   <br>  
+            Duration (minutes): <input class = "form-control" type="number" name="Duration"> <br>
+            Notes: <textarea class = "form-control" name="Notes" id="" cols="25" rows="6"></textarea> <br>
+            <input class = "form-control" type="submit" name="" value="Add Activity">
         </form>
     </main>
 </body>
