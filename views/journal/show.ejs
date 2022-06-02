@@ -4,16 +4,20 @@
 <%- include('../partials/head') %> 
     <title>Journal Entry: (date here) </title>
 </head>
-<body>
+<body class = "new-journal">
     <%- include('../partials/header.ejs')%>
-    <form action=""></form>
-    Date: <%= entries.createdAt.toString().slice(0,15) %>
-    <h1><%=entries.title%></h1> <br>
+    <main class="journal-show">
+    <a href="/entries/<%=entries.id %>/edit">Edit</a>
+    <h3><%=entries.title%></h3> 
+    Date: <%= entries.date.toString().slice(0,15) %> <br> <br>  
     <%= entries.entry %> <br>
     <form action="/entries/<%= entries.id %>?_method=DELETE" method="POST">
         <input class = btn-danger type="submit" value="DELETE">
     </form><br>
-    <a href="/entries/<%=entries.id %>/edit">Edit</a>
+    <div class="show-journal-image">
+        <img src="<%= entries.picture %>" width="256" height="256">
+    </div>
+</main>
 </body>
 <%- include('../partials/footer.ejs')%>
 </html>

@@ -4,16 +4,18 @@
     <%- include('../partials/head.ejs')%>
     <title>Add a journal entry here</title>
 </head>
-<body>
+<body class="new-journal">
     <%- include('../partials/header.ejs')%>
-    <h1>Journal</h1>
-    <form class = "form-group" action="/entries" method="POST">
+    <div class="container">
+    <form class = "form-group new-journal-form" action="/entries" method="POST">
     Date: <input class="form-control" type="date" name="date">    
-    Title: <input class ="form-control" type="text" name="title"> <br>
-    Image: <input class = "form-control" type="text" name="picture">
-    <textarea class ="form-control" name="entry" cols="80" rows="15"></textarea> <br>
+    Title: <input class ="form-control" type="text" name="title"> 
+    Image: <input class = "form-control" type="text" name="picture"> 
+    Post: <textarea class ="form-control" name="entry" cols="80" rows="10"></textarea> <br>
     <input class ="form-control" type="submit" value="Add Entry">
     </form>
+    <div class="journal-sidebar"></div>
+    </div>
 </body>
 <%- include('../partials/footer.ejs')%>
 </html>

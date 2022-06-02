@@ -8,6 +8,8 @@
 }
 
 
+
+
 /* .body-overlay {
   background: rgba(245, 245, 245, 0.4);
   width: 100%;
@@ -63,6 +65,15 @@ header {
     border-radius: 10px;
   }
 
+  .journal-show {
+    text-align: center;
+    margin: auto;
+    width: 30%;
+    background:rgba(245, 245, 245, 0.8);
+    color: green;
+    border-radius: 10px;
+  }
+
   .welcome {
     color: purple;
     position: absolute;
@@ -72,6 +83,12 @@ header {
   .homepage{
     background-image: url(https://shawellnessclinic.com/wp-content/uploads/2017/06/wellness.jpg);
     background-size:cover;
+    background-repeat: repeat;
+  }
+
+  .new-journal{
+    background-image: url(https://images.unsplash.com/photo-1633210155534-e43f00c1d627?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);
+    background-size: cover;
     background-repeat: repeat;
   }
 
@@ -91,6 +108,14 @@ header {
     padding: 15px;
     box-sizing: border-box;
     overflow: auto;
+  }
+  .new-journal-form{
+    width: 100%;
+    border-radius:10px 0 0 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: auto;
+    color: white;
   }
 
   .container {
@@ -112,3 +137,26 @@ header {
     border-radius: 0 10px 10px 0;
 
   }
+/* 
+  .journal-sidebar{
+    width: 50%;
+    background-image: url(https://images.unsplash.com/photo-1633210155534-e43f00c1d627?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);
+    background-size:contain;
+    border-radius: 0 10px 10px 0;
+
+  } */
+
+  /* .journal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+    padding-inline-start: 0;
+    padding: 40px;    
+  } */
+
+  .card {
+    background-color:mintcream;
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+}

@@ -7,12 +7,17 @@
 <body class="main-pages">
         <%- include('../partials/header.ejs')%>
         <main>
-        <a href=/entries/new> add new entries</a>
-    <h1>Past journal entries here</h1>
-    <ul>
+        <a class = "link-light" href=/entries/new> Add New Journal Entry</a>
+        <div class="counter">
+            Activity Counter: <%=entries.length%> <br>
+            Activity Streak: You have submitted activities X days in a row
+            </div><br>
+    <ul class = "d-inline-flex p-2">
         <%  for(let i=0; i < entries.length; i++) {  %>
-        <li>
-            <a href="/entries/<%=entries[i]._id%>"><%=entries[i].title%></a>
+        <li class = card>
+            <%=entries[i].title%> <br>
+            <%= entries[i].date.toString().slice(0,15)%> 
+            <a href="/entries/<%=entries[i]._id%>"><img src=<%=entries[i].picture %> width="120" height="120"></a>
         </li>
         <% } %> 
     </ul>
