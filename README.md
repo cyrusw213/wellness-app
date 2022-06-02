@@ -15,5 +15,6 @@
 - Better analytics of past activities. Track streaks, how many activities in the past month, week, etc
 - Improve CSS/UI
 - Ability to filter by activity type from dropdown
+- Search feature
 
 ## References
