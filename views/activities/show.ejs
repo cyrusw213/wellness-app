@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs')%>
-    <title><%=activities.Title%> <%= activities.createdAt.toString().slice(4,15) %> </title>
+    <title><%=activities.Title%> <%= activities.Date.toString().slice(4,15) %> </title>
 </head>
-<body>
+<body class="main-pages">
     <%- include('../partials/header.ejs')%>
     <main class = "activity-show">
         <a href="/activities/<%=activities.id %>/edit">Edit</a>
-        <h1><%=activities.Title%></h1><br>
-        <h3><%=activities.Duration%> minutes </h3> <br>
+        <h2>Activity: <%=activities.Title%></h2><br>
+        <%= activities.Date.toString().slice(0,15) %> <br>
+        <h3>Duration: <%=activities.Duration%> Minutes </h3> <br>
         <div>
-            <%= activities.Notes %> <br>
-            <%= activities.createdAt.toString().slice(0,15) %> <br>
+            Notes: <%= activities.Notes %> <br>
             <img src="<%= activities.Photo%>" width="256" height="256"><br> 
         </div> <br>
-        <form action="/activities/<%= activities.id %>?_method=DELETE" method="POST">
-            <input type="submit" value="DELETE">
+        <form class= 'form-group' action="/activities/<%= activities.id %>?_method=DELETE" method="POST">
+            <input class="btn btn-danger" type="submit" value="DELETE">
         </form><br>
     </main>
 </body>

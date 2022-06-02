@@ -4,22 +4,22 @@
     <%- include('../partials/head.ejs')%>
     <title>Past Activities</title>
 </head>
-<body>
+<body class="main-pages">
     <%- include('../partials/header.ejs')%>
-    <a class = "link-success" href = "/activities/new">Log New Entry</a> <br>
+    <a class="link-light" href = "/activities/new">Log New Entry</a> <br>
     <table class="table">
         <thead>
             <tr>
                 <th scope="col"> Date </th>
                 <th scope = "col">Activity</th>
-                <th scope = "col">Duration</th>
+                <th scope = "col">Duration (minutes)</th>
             </tr>
         </thead>
         <tbody>
             <% for(let i = 0; i <activities.length; i++) { %>
             <tr>
                 <td scope = "row">
-                    <a href="/activities/<%=activities[i]._id%>"><%=activities[i].Date.toString().slice(0,15) %> </a>
+                    <a class="link-light" href="/activities/<%=activities[i]._id%>"><%=activities[i].Date.toString().slice(0,15) %> </a>
                 </td>  
                 <td scope = "row"><%=activities[i].Title%></td>
                 <td scope = "row"><%=activities[i].Duration%></td>

@@ -2,18 +2,32 @@
 <html lang="en">
 <head>
     <%- include('../partials/head.ejs')%>
-    <title>Edit Activity</title>
+    <title>Edit</title>
 </head>
 <body>
     <%- include('../partials/header.ejs')%>
-    <h1>Edit Activity</h1>
-    <form action="/activities/<%=activities._id%>?_method=PUT" method="POST">
+    <div class="container">
+    <h1>Edit <%=activities.Title%></h1>
+    <form class= "form-group new-form" action="/activities/<%=activities._id%>?_method=PUT" method="POST">
     <!-- prepopulate form with original data -->
-    Activity: <input type="text" name="Title" value="<%=activities.Title%>"> <br>
-    Duration: <input type="number" name="Duration" value="<%=activities.Duration%>"><br>
-    Notes: <textarea name="Notes" cols="30" rows="10"><%=activities.Notes%></textarea><br>
-    <input type="submit" value="Update">
+    Date: <input class = "form-control" type="date" name="Date" value="<%=activities.Date%>"><br>
+    Activity (select one): <select class="form-control btn btn-sm btn-info dropdown-toggle" name="Title">
+        <option value="Misc Cardio">Misc Cardio</option>
+        <option value="Weightlifting">Weightlifting</option>
+        <option value="Run">Run</option>
+        <option value="Bike Ride">Bike Ride</option>
+        <option value="Swim">Swim</option>
+        <option value="Walk">Walk</option>
+        <option value="Yoga">Yoga</option>
+        <option value="Meditation">Meditation</option> 
+        </select><br>
+    Duration (minutes): <input class="form-control" type="number" name="Duration" value="<%=activities.Duration%>"><br>
+    Photo Link: <input class = "form-control" type="text" name="Photo" value="https://www.mensjournal.com/wp-content/uploads/mf/runner-1280.jpg?w=1200&h=960&crop=1&quality=82&strip=all">
+    Notes: <textarea class="form-control" name="Notes" cols="25" rows="4"><%=activities.Notes%></textarea><br>
+    <input class="form-control" type="submit" value="Update">
     </form>
+    <div class="sidebar"></div>
+    </div>
 </body>
 <%- include('../partials/footer.ejs')%>
 </html>
