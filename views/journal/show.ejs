@@ -12,7 +12,7 @@
     Date: <%= entries.date.toString().slice(0,15) %> <br> <br>  
     <%= entries.entry %> <br>
     <form action="/entries/<%= entries.id %>?_method=DELETE" method="POST">
-        <input class = btn-danger type="submit" value="DELETE">
+        <input class = "btn btn-danger" type="submit" value="DELETE">
     </form><br>
     <div class="show-journal-image">
         <img src="<%= entries.picture %>" width="256" height="256">

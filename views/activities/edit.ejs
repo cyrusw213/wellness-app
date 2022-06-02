@@ -10,7 +10,6 @@
     <h1>Edit <%=activities.Title%></h1>
     <form class= "form-group new-form" action="/activities/<%=activities._id%>?_method=PUT" method="POST">
     <!-- prepopulate form with original data -->
-    Date: <input class = "form-control" type="date" name="Date" value="<%=activities.Date%>"><br>
     Activity (select one): <select class="form-control btn btn-sm btn-info dropdown-toggle" name="Title">
         <option value="Misc Cardio">Misc Cardio</option>
         <option value="Weightlifting">Weightlifting</option>
